@@ -1,6 +1,8 @@
 <script>
 export default {
-    
+   props:{
+    name:String,
+   } 
 }
 </script>
 <template>
@@ -33,7 +35,9 @@ export default {
         </div>
    </div>
    <div class="main">
-
+    <ul>
+        <li>{{ name }}</li>
+    </ul>
    </div>
 </template>
 <style lang="scss">
