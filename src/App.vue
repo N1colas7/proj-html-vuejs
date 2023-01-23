@@ -28,7 +28,7 @@ export default{
 
 <template lang="">
   <div>
-    <AppHeader v-for="item in navHead" :name="item.name"/>
+    <AppHeader :navHead=navHead />
     <AppContent />
     <FooterApp />
    </div> 

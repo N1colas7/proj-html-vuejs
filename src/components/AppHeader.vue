@@ -1,7 +1,7 @@
 <script>
 export default {
    props:{
-    name:String,
+    navHead:Array,
    } 
 }
 </script>
@@ -35,9 +35,16 @@ export default {
         </div>
    </div>
    <div class="main">
-    <ul>
-        <li>{{ name }}</li>
-    </ul>
+        <div class="row d-flex justify-content-around">
+            <div class="col-6">
+                <img src="../assets/img/classic_shop_logo1x.png" alt="image">
+            </div>
+            <div class="col-6">
+                <ul>
+                    <li v-for="(item , index) in navHead" :key="index">{{ item.name }}</li>
+                </ul>    
+            </div>
+        </div>   
    </div>
 </template>
 <style lang="scss">
@@ -47,5 +54,8 @@ export default {
     }
     .bord-left{
         border-left: 1px solid rgb(209, 207, 207);;
+    }
+    .main{
+        padding: 10px;
     }
 </style>

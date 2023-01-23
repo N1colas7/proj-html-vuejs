@@ -1,10 +1,17 @@
 <script>
 export default {
-    
+    data() {
+        return {
+            activeSlide: 0,
+        }
+    },    
 }
+
 </script>
 <template lang="">
-    content
+    <div class="slider">
+        
+    </div>
 </template>
 <style lang="scss">
     
