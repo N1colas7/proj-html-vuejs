@@ -1,10 +1,14 @@
 <script>
 export default {
-    
+    data() {
+        return {
+           
+        }
+    },
 }
 </script>
 <template lang="">
-    content
+    foot
 </template>
 <style lang="scss">
     
