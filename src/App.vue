@@ -14,10 +14,22 @@ export default{
       return {
         navHead:[
           {
-            name:"ciccio"
+            name:"Home"
           },
           {
-            name:"ciccio2"
+            name:"Shop"
+          },
+          {
+            name:"Products"
+          },
+          {
+            name:"Categories"
+          },
+          {
+            name:"News"
+          },
+          {
+            name:"Elements"
           }
         ]
       }

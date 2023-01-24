@@ -35,14 +35,16 @@ export default {
         </div>
    </div>
    <div class="main">
-        <div class="row d-flex justify-content-around">
-            <div class="col-6">
+        <div class="row d-flex">
+            <div class="col-4">
                 <img src="../assets/img/classic_shop_logo1x.png" alt="image">
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <ul>
-                    <li v-for="(item , index) in navHead" :key="index">{{ item.name }}</li>
-                </ul>    
+                    <li class="mx-3" v-for="(item , index) in navHead" :key="index">{{ item.name }} <i class="fa-solid fa-caret-down"></i></li>
+                    <li class="mx-3"><button type="button" class="btn btn-primary">Shop now</button></li>
+                    <li class="mx-3"><i class="fa-solid fa-magnifying-glass"></i></li>
+                </ul>                   
             </div>
         </div>   
    </div>
@@ -57,5 +59,11 @@ export default {
     }
     .main{
         padding: 10px;
+    }
+    ul{
+        list-style: none;
+            li{
+                float: left;
+            }
     }
 </style>
