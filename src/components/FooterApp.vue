@@ -8,7 +8,7 @@ export default {
 }
 </script>
 <template lang="">
-    foot
+    
 </template>
 <style lang="scss">
     

@@ -1,5 +1,9 @@
 <script>
+import TopSellers from './TopSellers.vue'
 export default {
+    components:{
+        TopSellers,
+    },
     data() {
         return {
             activeSlide:0,
@@ -61,6 +65,7 @@ export default {
         </div>
         </div>
     </div>
+    <TopSellers />
 
 </template>
 <style lang="scss">
