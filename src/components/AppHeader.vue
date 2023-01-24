@@ -37,7 +37,7 @@ export default {
    <div class="main">
         <div class="row d-flex">
             <div class="col-4">
-                <img src="../assets/img/classic_shop_logo1x.png" alt="image">
+                <img src="/img/classic_shop_logo1x.png" alt="image">
             </div>
             <div class="col-8">
                 <ul>
