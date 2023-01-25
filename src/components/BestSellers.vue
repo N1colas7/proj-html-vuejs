@@ -66,7 +66,7 @@ data() {
                 <h1>Best Seller</h1>
                 <p>Must have products from our top sellers</p>
         </div>
-    <Carousel :items-to-show="5" :settings="settings" :breakpoints="breakpoints">
+    <Carousel :items-to-show="5" :wrap-around='true' :settings="settings" :breakpoints="breakpoints">
     <Slide v-for="slide in SlideImg" :key="slide">
       <div class="carousel__item">
         <img :src="slide.img" :alt="slide.text">

@@ -1,42 +1,106 @@
 <script>
 import FirstPartFoot from './FirstPartFoot.vue';
+import MainFoot from './MainFoot.vue';
 export default {
+    components:{
+        FirstPartFoot,
+        MainFoot,
+    },
     data() {
         return {
-           
-        }
+    TopRatedProducts:[
+          {
+            name:"Leather Gloves",
+            star:"",
+            price:"$45",
+            img:"/img/leather_gloves-120x156.jpg",
+          },
+          {
+            name:"Black Leather Jacket",
+            star:"",
+            price:"$200",
+            img:"/img/black_elegant_leather_jacket-120x156.jpg",
+          },
+          {
+            name:"Spring Printed Dress",
+            star:"",
+            price:"$47",
+            img:"/img/spring_printed_dress-120x156.jpg",
+          },
+          {
+            name:"Blue Leather Jacket",
+            star:"",
+            price:"$87",
+            img:"/img/blue_leather_jacket-120x156.jpg",
+          },
+        ],
+        RecentPosts:[
+            {
+                img:"/img/post_img_12-300x188.jpg",
+                title:"Aenean lobortis sapien enim viverra",
+                text:"Markup, News, Trends",
+            },
+            {
+                img:"/img/post_img_11-300x188.jpg",
+                title:"Duis ac massa semper maximus",
+                text:"Fashion, News, Special Offers, Trends",
+            },
+        ],
+        ButtonList:[
+            {
+                name:"Black"
+            },
+            {
+                name:"Boots"
+            },
+            {
+                name:" Brown"
+            },
+            {
+                name:"Casual"
+            },
+            {
+                name:"D&G"
+            },
+            {
+                name:"Fabric"
+            },
+            {
+                name:"flowers"
+            },
+            {
+                name:"Grey"
+            },
+            {
+                name:"hat"
+            },
+            {
+                name:"hipster"
+            },
+            {
+                name:"lines"
+            },
+            {
+                name:"red"
+            },
+            {
+                name:"new york"
+            },
+            {
+                name:"responsive"
+            },
+            {
+                name:"summer"
+            },
+        ]
+      }
     },
 }
 </script>
 <template lang="">
-    <div class="container-fluid mt-5">
-        <div class="row grey d-flex justify-content-around">
-            <div class="col-6 d-flex center justify-content-evenly">
-                <span class="message"><i class="fa-solid fa-envelope"></i></span>
-                <h3>Suscribe now and get special offers</h3>
-            </div>
-            <div class="col-6 d-flex center justify-content-evenly">
-                <input class="form-control" type="text" placeholder="Insert you email" aria-label="default input example">
-                <button type="button" class="btn btn-primary">Send</button>
-            </div>
-        </div>
-    </div>
+    <FirstPartFoot />
+    <MainFoot :TopRatedProducts= TopRatedProducts :RecentPosts=RecentPosts :ButtonList=ButtonList />
 </template>
 <style lang="scss">
-    .row{
-        height: 300px;
-    }
-    .grey{
-        background-color: rgb(46, 50, 56);
-        color:white;
-    }
-    .center{
-        align-items: center;
-    }
-    .message{
-        padding: 2%;
-        background-color: rgb(37, 37, 37);
-        border-radius: 50%;
-        font-size: 30px;
-    }
+    
 </style>
