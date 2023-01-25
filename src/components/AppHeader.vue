@@ -16,19 +16,30 @@ export default {
                     <i class="fa-brands fa-youtube mx-2"></i>
                 </div>
                 <div class="col-6 d-flex justify-content-around">
-                    <div class="left-head">
-                        <p>Shopping Cart</p>
-                    </div>
-                    <div class="left-head bord-left">
-                        <p>
-                            My Account <i class="fa-solid fa-caret-down"></i>
-                        </p>
-                    </div>
-                    <div class="left-head bord-left d-flex">
-                        <span class="mx-1"><i class="fa-solid fa-cart-shopping"></i></span>
-                        <span class="mx-1">Cart</span>
-                        <span class="mx-2"><i class="fa-solid fa-caret-down"></i></span>
-                    </div>
+                    <div class="dropdown left-head">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Shopping Cart
+                        </button>
+                        </div>
+                    <div class="dropdown left-head bord-left">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            My Account
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Setting</a></li>
+                            <li><a class="dropdown-item" href="#">Account</a></li>
+                            <li><a class="dropdown-item" href="#">Orders</a></li>
+                        </ul>
+                        </div>
+                        <div class="dropdown left-head bord-left">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cart
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Folder</a></li>
+                            <li><a class="dropdown-item" href="#">MyCart</a></li>
+                        </ul>
+                        </div>
 
                 </div>
             </div>
@@ -41,9 +52,20 @@ export default {
             </div>
             <div class="col-8">
                 <ul>
-                    <li class="mx-3" v-for="(item , index) in navHead" :key="index">{{ item.name }} <i class="fa-solid fa-caret-down"></i></li>
-                    <li class="mx-3"><button type="button" class="btn btn-primary">Shop now</button></li>
-                    <li class="mx-3"><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li class="" v-for="(item , index) in navHead" :key="index">
+                        <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ item.name }}
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Setting</a></li>
+                            <li><a class="dropdown-item" href="#">Account</a></li>
+                            <li><a class="dropdown-item" href="#">Orders</a></li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li class=""><button type="button" class="btn btn-primary">Shop now</button></li>
+                    <li class="ml-2"><i class="fa-solid fa-magnifying-glass"></i></li>
                 </ul>                   
             </div>
         </div>   
