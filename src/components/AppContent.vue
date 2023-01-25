@@ -1,10 +1,17 @@
 <script>
 import TopSellers from './TopSellers.vue'
 import SeasonContent from './SeasonContent.vue';
+import BestSellers from './BestSellers.vue'
+import Information from './Information.vue'
+
+
+
 export default {
     components:{
         TopSellers,
         SeasonContent,
+        BestSellers,
+        Information,
     },
     data() {
         return {
@@ -55,10 +62,10 @@ export default {
             <p>{{slideJumbo[activeSlide].Text}}</p>
         <div class="buttonSlideChange">
             <div class="prev" v-if="slideJumbo.length!=0">
-                <button type="button" class="btn btn-dark" @click="prevSlide">indietro</button>
+                <button type="button" class="btn btn-dark" @click="prevSlide"><i class="fa-solid fa-chevron-left"></i></button>
             </div>
             <div class="next" v-if="slideJumbo.length-1!=activeSlide">
-                <button type="button" class="btn btn-dark" @click="nextSlide">avanti</button>    
+                <button type="button" class="btn btn-dark" @click="nextSlide"><i class="fa-solid fa-chevron-right"></i></button>    
             </div>
         </div>
         <div class="buttonSlide">
@@ -69,6 +76,8 @@ export default {
     </div>
     <TopSellers />
     <SeasonContent />
+    <BestSellers />
+    <Information />
 
 </template>
 <style lang="scss">
