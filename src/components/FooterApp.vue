@@ -1,10 +1,12 @@
 <script>
 import FirstPartFoot from './FirstPartFoot.vue';
 import MainFoot from './MainFoot.vue';
+import EndFoot from './EndFoot.vue';
 export default {
     components:{
         FirstPartFoot,
         MainFoot,
+        EndFoot,
     },
     data() {
         return {
@@ -100,6 +102,7 @@ export default {
 <template lang="">
     <FirstPartFoot />
     <MainFoot :TopRatedProducts= TopRatedProducts :RecentPosts=RecentPosts :ButtonList=ButtonList />
+    <EndFoot />
 </template>
 <style lang="scss">
     
