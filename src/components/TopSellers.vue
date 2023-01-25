@@ -109,19 +109,58 @@ export default {
                 <button type="button" class="btn btn-outline-secondary" @click="displayWomen()">Women</button>
                 <button type="button" class="btn btn-outline-secondary" @click="displayAccessories()">Accessories</button>
             </div>
-            <div class="contentTop">
-                <img v-for="(item, index) in ActiveCategories" :key="index" :src="item.img" alt="img">
-            </div>
+            <div class="ContainTop">
+                <div class="card">
+                    <div class="contentTop">
+                        <img v-for="(item, index) in ActiveCategories" :key="index" :src="item.img" alt="img">
+                    </div>
+                    <div class="TopText">
+                        <h3 v-for="(item, index) in ActiveCategories" :key="index">{{item.title}}</h3>
+                    </div>
+                    <div class="subtitle">
+                        <p v-for="(item, index) in ActiveCategories" :key="index">{{item.subtitle}}</p>
+                    </div>
+                    <div class="price">
+                        <p v-for="(item, index) in ActiveCategories" :key="index">{{item.price}}</p>
+                    </div>
+                </div>
+            </div>    
     </div>
 </template>
 <style lang="scss">
     .TopSellers{
         margin-top: 50px;
-        h1,p,ButtonTopSellers{
+        h1,p{
             text-align: center;
         }
         .ButtonTopSellers{
-
+            display:flex;
         }
+        .ContaintTop{
+            display: flex;
+            .card{
+                width:calc(100% / 4);
+                margin-left: 60px;
+            }
+        }
+        img{
+            width:calc(100% / 4);
+        }
+        .TopText{
+            display: flex;
+            justify-content: space-around;
+        }
+        .subtitle{
+            display: flex;
+            justify-content: space-around;
+            opacity: 0.7;
+        }
+        .price{
+            display: flex;
+            justify-content: space-around;
+        }
+        
     }
 </style>
+
+
