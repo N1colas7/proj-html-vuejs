@@ -1,8 +1,10 @@
 <script>
 import TopSellers from './TopSellers.vue'
+import SeasonContent from './SeasonContent.vue';
 export default {
     components:{
         TopSellers,
+        SeasonContent,
     },
     data() {
         return {
@@ -66,6 +68,7 @@ export default {
         </div>
     </div>
     <TopSellers />
+    <SeasonContent />
 
 </template>
 <style lang="scss">
